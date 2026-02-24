@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Advokatska kancelarija Vuković & Vuković | AKVV</title>
+<meta name="description" content="Advokatska kancelarija Vuković & Vuković pruža pravne usluge iz oblasti radnog, porodičnog, privrednog i krivičnog prava.">
+<meta name="keywords" content="advokat Pančevo, advokat Beograd, radno pravo, porodično pravo, krivično pravo">
+<meta name="author" content="AKVV">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#f6f6f6;color:#222;line-height:1.6;scroll-behavior:smooth}
+.container{width:90%;max-width:1200px;margin:auto}
+
+.gold-line{height:4px;background:linear-gradient(to right,#c6a75e,#e5d08c,#c6a75e)}
+
+header{background:#111;color:white;position:fixed;width:100%;z-index:1000}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+nav ul{list-style:none;display:flex;gap:30px}
+nav a{color:white;text-decoration:none;font-size:14px;letter-spacing:1px}
+.lang-btn{background:none;border:1px solid #c6a75e;color:#c6a75e;padding:5px 10px;cursor:pointer}
+
+.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f') center/cover no-repeat;
+display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:20px}
+
+.hero h1{font-family:'Playfair Display',serif;font-size:48px;margin-bottom:20px;animation:fadeDown 1.2s}
+.hero p{margin-bottom:30px;animation:fadeUp 1.5s}
+
+.btn{padding:12px 28px;border:1px solid #c6a75e;color:#c6a75e;text-decoration:none;transition:.3s}
+.btn:hover{background:#c6a75e;color:#111}
+
+section{padding:100px 0}
+.section-title{text-align:center;margin-bottom:60px;font-family:'Playfair Display',serif;font-size:32px;position:relative}
+.section-title:after{content:'';display:block;width:80px;height:2px;background:#c6a75e;margin:15px auto}
+
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px}
+.service-box{background:white;padding:30px;border:1px solid #ddd;transition:.3s}
+.service-box:hover{transform:translateY(-5px)}
+
+.about{background:#111;color:white;text-align:center;padding:80px 20px}
+
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
+.blog-post{background:white;padding:20px;border:1px solid #ddd}
+
+.contact{text-align:center}
+form{max-width:600px;margin:30px auto;display:flex;flex-direction:column;gap:15px}
+input,textarea{padding:10px;border:1px solid #ccc}
+button{padding:12px;background:#111;color:white;border:none;cursor:pointer}
+button:hover{background:#c6a75e;color:#111}
+
+footer{background:#111;color:white;text-align:center;padding:20px;font-size:14px}
+
+@keyframes fadeDown{from{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+
+<body>
+
+<div class="gold-line"></div>
+
+<header>
+<div class="container">
+<nav>
+<div><strong>AKVV</strong></div>
+<ul>
+<li><a href="#usluge">Usluge</a></li>
+<li><a href="#onama">O nama</a></li>
+<li><a href="#blog">Blog</a></li>
+<li><a href="#kontakt">Kontakt</a></li>
+<li><button class="lang-btn" onclick="toggleLang()">Ћир/Lat</button></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<div class="hero">
+<div>
+<h1 id="title">Advokatska kancelarija Vuković & Vuković</h1>
+<p id="subtitle">Profesionalna i posvećena pravna zaštita Vaših interesa</p>
+<a href="#kontakt" class="btn">Zakažite konsultaciju</a>
+</div>
+</div>
+
+<section id="usluge">
+<div class="container">
+<h2 class="section-title">Naše usluge</h2>
+<div class="services">
+<div class="service-box"><h3>Radno pravo</h3><p>Zastupanje zaposlenih i poslodavaca.</p></div>
+<div class="service-box"><h3>Porodično pravo</h3><p>Razvodi, alimentacija, imovinski odnosi.</p></div>
+<div class="service-box"><h3>Privredno pravo</h3><p>Osnivanje društava i ugovori.</p></div>
+<div class="service-box"><h3>Krivično pravo</h3><p>Odbrana u svim fazama postupka.</p></div>
+</div>
+</div>
+</section>
+
+<section id="onama" class="about">
+<h2 class="section-title">O kancelariji</h2>
+<p>AKVV pruža sveobuhvatne pravne usluge uz diskreciju, stručnost i profesionalnost.</p>
+</section>
+
+<section id="blog">
+<div class="container">
+<h2 class="section-title">Blog</h2>
+<div class="blog-grid">
+<div class="blog-post"><h4>Nezakonit otkaz</h4><p>Koja su prava zaposlenog?</p></div>
+<div class="blog-post"><h4>Alimentacija</h4><p>Kada se može zahtevati?</p></div>
+<div class="blog-post"><h4>Ugovori u privredi</h4><p>Na šta obratiti pažnju?</p></div>
+</div>
+</div>
+</section>
+
+<section id="kontakt" class="contact">
+<div class="container">
+<h2 class="section-title">Kontakt</h2>
+
+<form action="https://formspree.io/f/yourID" method="POST">
+<input type="text" name="name" placeholder="Ime i prezime" required>
+<input type="email" name="email" placeholder="Email" required>
+<textarea name="message" rows="5" placeholder="Vaša poruka" required></textarea>
+<button type="submit">Pošalji poruku</button>
+</form>
+
+<p>Telefon: +381 XX XXX XXXX</p>
+<p>Email: info@akvv.rs</p>
+<p>Pančevo / Beograd</p>
+
+</div>
+</section>
+
+<footer>
+© 2026 Advokatska kancelarija Vuković & Vuković | Sva prava zadržana
+</footer>
+
+<script>
+function toggleLang(){
+let title=document.getElementById("title");
+let subtitle=document.getElementById("subtitle");
+if(title.innerText.includes("Advokatska")){
+title.innerText="Адвокатска канцеларија Вуковић & Вуковић";
+subtitle.innerText="Професионална и посвећена правна заштита Ваших интереса";
+}else{
+title.innerText="Advokatska kancelarija Vuković & Vuković";
+subtitle.innerText="Profesionalna i posvećena pravna zaštita Vaših interesa";
+}
+}
+</script>
+
+</body>
+</html>
