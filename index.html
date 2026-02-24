@@ -3,153 +3,143 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Advokatska kancelarija Vuković & Vuković | AKVV</title>
-<meta name="description" content="Advokatska kancelarija Vuković & Vuković pruža pravne usluge iz oblasti radnog, porodičnog, privrednog i krivičnog prava.">
-<meta name="keywords" content="advokat Pančevo, advokat Beograd, radno pravo, porodično pravo, krivično pravo">
-<meta name="author" content="AKVV">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Advokatska kancelarija VUKOVIĆ & VUKOVIĆ</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',sans-serif;background:#f6f6f6;color:#222;line-height:1.6;scroll-behavior:smooth}
-.container{width:90%;max-width:1200px;margin:auto}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+}
 
-.gold-line{height:4px;background:linear-gradient(to right,#c6a75e,#e5d08c,#c6a75e)}
+header {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
 
-header{background:#111;color:white;position:fixed;width:100%;z-index:1000}
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
-nav ul{list-style:none;display:flex;gap:30px}
-nav a{color:white;text-decoration:none;font-size:14px;letter-spacing:1px}
-.lang-btn{background:none;border:1px solid #c6a75e;color:#c6a75e;padding:5px 10px;cursor:pointer}
+header h1 {
+    font-size: 40px;
+    letter-spacing: 3px;
+    margin: 0;
+}
 
-.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f') center/cover no-repeat;
-display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:20px}
+nav {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
 
-.hero h1{font-family:'Playfair Display',serif;font-size:48px;margin-bottom:20px;animation:fadeDown 1.2s}
-.hero p{margin-bottom:30px;animation:fadeUp 1.5s}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
 
-.btn{padding:12px 28px;border:1px solid #c6a75e;color:#c6a75e;text-decoration:none;transition:.3s}
-.btn:hover{background:#c6a75e;color:#111}
+section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
 
-section{padding:100px 0}
-.section-title{text-align:center;margin-bottom:60px;font-family:'Playfair Display',serif;font-size:32px;position:relative}
-.section-title:after{content:'';display:block;width:80px;height:2px;background:#c6a75e;margin:15px auto}
+h2 {
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+}
 
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px}
-.service-box{background:white;padding:30px;border:1px solid #ddd;transition:.3s}
-.service-box:hover{transform:translateY(-5px)}
-
-.about{background:#111;color:white;text-align:center;padding:80px 20px}
-
-.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
-.blog-post{background:white;padding:20px;border:1px solid #ddd}
-
-.contact{text-align:center}
-form{max-width:600px;margin:30px auto;display:flex;flex-direction:column;gap:15px}
-input,textarea{padding:10px;border:1px solid #ccc}
-button{padding:12px;background:#111;color:white;border:none;cursor:pointer}
-button:hover{background:#c6a75e;color:#111}
-
-footer{background:#111;color:white;text-align:center;padding:20px;font-size:14px}
-
-@keyframes fadeDown{from{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #000;
+    color: #fff;
+    margin-top: 60px;
+}
 </style>
 </head>
 
 <body>
 
-<div class="gold-line"></div>
-
 <header>
-<div class="container">
-<nav>
-<div><strong>AKVV</strong></div>
-<ul>
-<li><a href="#usluge">Usluge</a></li>
-<li><a href="#onama">O nama</a></li>
-<li><a href="#blog">Blog</a></li>
-<li><a href="#kontakt">Kontakt</a></li>
-<li><button class="lang-btn" onclick="toggleLang()">Ћир/Lat</button></li>
-</ul>
-</nav>
-</div>
+<h1>ADVOKATSKA KANCELARIJA<br>VUKOVIĆ & VUKOVIĆ</h1>
 </header>
 
-<div class="hero">
-<div>
-<h1 id="title">Advokatska kancelarija Vuković & Vuković</h1>
-<p id="subtitle">Profesionalna i posvećena pravna zaštita Vaših interesa</p>
-<a href="#kontakt" class="btn">Zakažite konsultaciju</a>
-</div>
-</div>
+<nav>
+<a href="#onama">O NAMA</a>
+<a href="#oblasti">OBLASTI</a>
+<a href="#sporovi">SPOROVI</a>
+<a href="#tim">NAŠ TIM</a>
+<a href="#blog">BLOG</a>
+<a href="#kontakt">KONTAKT</a>
+</nav>
 
-<section id="usluge">
-<div class="container">
-<h2 class="section-title">Naše usluge</h2>
-<div class="services">
-<div class="service-box"><h3>Radno pravo</h3><p>Zastupanje zaposlenih i poslodavaca.</p></div>
-<div class="service-box"><h3>Porodično pravo</h3><p>Razvodi, alimentacija, imovinski odnosi.</p></div>
-<div class="service-box"><h3>Privredno pravo</h3><p>Osnivanje društava i ugovori.</p></div>
-<div class="service-box"><h3>Krivično pravo</h3><p>Odbrana u svim fazama postupka.</p></div>
-</div>
-</div>
+<section id="onama">
+<h2>O NAMA</h2>
+<p>KANCELARIJA JE OSNOVANA 2000. GODINE I OD SVOG POČETKA PRUŽA VISOK NIVO PREDANOSTI KLIJENTIMA.</p>
+<p>U RAZNOVRSNIM PRAVNIM PROBLEMIMA PRUŽAMO KVALITETNU USLUGU VODEĆI SE NAČELIMA ODGOVORNOSTI I SAVESNOSTI KOJA SU U TEMELJIMA TRADICIJE POSLOVANJA ADVOKATSKE STRUKE.</p>
+<p>U SVOJOJ PONUDI PRUŽAMO ŠIROK IZBOR PRAVNIH USLUGA, A SARADNJA SA STRANKAMA JE OD PRIORITETNOG ZNAČAJA.</p>
+<p>KAO POUZDAN PARTNER SVOJ RAD ZASNIVAMO NA INTEGRITETU, ISKUSTVU I EFIKASNOSTI.</p>
 </section>
 
-<section id="onama" class="about">
-<h2 class="section-title">O kancelariji</h2>
-<p>AKVV pruža sveobuhvatne pravne usluge uz diskreciju, stručnost i profesionalnost.</p>
+<section id="oblasti">
+<h2>OBLASTI KOJIM SE BAVIMO</h2>
+<p><strong>GRAĐANSKO PRAVO</strong></p>
+<p><strong>PORODIČNO PRAVO</strong></p>
+<p><strong>NASLEDNO PRAVO</strong></p>
+<p><strong>OBLIGACIONO PRAVO</strong></p>
+<p><strong>KRIVIČNO PRAVO</strong></p>
+<p><strong>PRIVREDNO PRAVO</strong></p>
+<p><strong>RADNO PRAVO</strong></p>
+</section>
+
+<section id="sporovi">
+<h2>PORODIČNI, NASLEDNI I RADNI SPOROVI</h2>
+<p>Savetovanje i zastupanje u svim vrstama parničnih, vanparničnih i upravnih postupaka.</p>
+<p>Detaljna analiza svakog slučaja i individualni pristup klijentu.</p>
+</section>
+
+<section id="tim">
+<h2>NAŠ TIM</h2>
+<p><strong>ADVOKAT SAŠA VUKOVIĆ</strong></p>
+<p>Diplomirani pravnik Univerziteta u Beogradu. Master međunarodnog prava. Položen pravosudni i advokatski ispit.</p>
+
+<p><strong>ADVOKAT MILEVA VUKOVIĆ</strong></p>
+<p>Diplomirani pravnik Univerziteta u Kragujevcu. Dugogodišnje iskustvo u parničnim i privrednim sporovima.</p>
+
+<p><strong>ADVOKAT IVANA VUKOVIĆ</strong></p>
+<p>Diplomirani pravnik Univerziteta u Beogradu. Zastupanje pred katastrom i u upravnim postupcima.</p>
 </section>
 
 <section id="blog">
-<div class="container">
-<h2 class="section-title">Blog</h2>
-<div class="blog-grid">
-<div class="blog-post"><h4>Nezakonit otkaz</h4><p>Koja su prava zaposlenog?</p></div>
-<div class="blog-post"><h4>Alimentacija</h4><p>Kada se može zahtevati?</p></div>
-<div class="blog-post"><h4>Ugovori u privredi</h4><p>Na šta obratiti pažnju?</p></div>
-</div>
-</div>
+<h2>BLOG</h2>
+<p>Stručni tekstovi iz oblasti izvršnog, radnog, porodičnog, naslednog i obligacionog prava.</p>
 </section>
 
-<section id="kontakt" class="contact">
-<div class="container">
-<h2 class="section-title">Kontakt</h2>
+<section id="kontakt">
+<h2>KONTAKT</h2>
+<p><strong>Beograd:</strong><br>
+Kneza Miloša 95, sprat 1.5, st. 11</p>
 
-<form action="https://formspree.io/f/yourID" method="POST">
-<input type="text" name="name" placeholder="Ime i prezime" required>
-<input type="email" name="email" placeholder="Email" required>
-<textarea name="message" rows="5" placeholder="Vaša poruka" required></textarea>
-<button type="submit">Pošalji poruku</button>
-</form>
+<p><strong>Čačak:</strong><br>
+Bate Janković 21</p>
 
-<p>Telefon: +381 XX XXX XXXX</p>
-<p>Email: info@akvv.rs</p>
-<p>Pančevo / Beograd</p>
+<p><strong>Email:</strong><br>
+advsasavukovic@gmail.com<br>
+mileva.vukovic@gmail.com<br>
+advivana.vukovic@gmail.com</p>
 
-</div>
+<p><strong>Telefon:</strong><br>
+Saša Vuković: 0642092029<br>
+Mileva Vuković: 0641661188<br>
+Ivana Vuković: +381603384016</p>
 </section>
 
 <footer>
-© 2026 Advokatska kancelarija Vuković & Vuković | Sva prava zadržana
+© 2026 Advokatska kancelarija VUKOVIĆ & VUKOVIĆ
 </footer>
-
-<script>
-function toggleLang(){
-let title=document.getElementById("title");
-let subtitle=document.getElementById("subtitle");
-if(title.innerText.includes("Advokatska")){
-title.innerText="Адвокатска канцеларија Вуковић & Вуковић";
-subtitle.innerText="Професионална и посвећена правна заштита Ваших интереса";
-}else{
-title.innerText="Advokatska kancelarija Vuković & Vuković";
-subtitle.innerText="Profesionalna i posvećena pravna zaštita Vaših interesa";
-}
-}
-</script>
 
 </body>
 </html>
