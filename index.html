@@ -3,131 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vuković&Vuković - Advokatska kancelarija</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>VUKOVIĆ&VUKOVIĆ - Advokatska kancelarija</title>
 <style>
     body {
-        font-family: 'Times New Roman', Times, serif;
+        font-family: 'Times New Roman', serif;
         margin: 0;
         padding: 0;
-        line-height: 1.6;
-        color: #111;
-        background-color: #fdfdfd;
+        background-color: #fff;
+        color: #000;
     }
-
     header {
         text-align: center;
-        padding: 40px 20px 20px 20px;
+        padding: 30px 10px;
     }
-
-    header img {
-        max-width: 120px;
+    header img.logo {
+        width: 80px;
+        height: auto;
         margin-bottom: 10px;
     }
-
-    header h1 {
+    header h1.site-title {
+        font-size: 3em;
         margin: 0;
-        font-size: 2.5em;
         letter-spacing: 2px;
     }
-
-    header h2 {
-        margin: 5px 0 0 0;
-        font-size: 1.2em;
+    header h2.site-subtitle {
+        font-size: 1.5em;
+        margin: 0;
         font-weight: normal;
+        color: #000; /* podnaslov crni */
     }
-
-    nav {
+    .about {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 20px;
+        text-align: justify;
+        line-height: 1.6;
+    }
+    .flex-container {
         display: flex;
         justify-content: center;
-        background-color: #fff;
-        border-bottom: 1px solid #ccc;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-
-    nav a {
-        padding: 15px 20px;
-        display: block;
-        text-decoration: none;
-        color: #111;
-        font-weight: bold;
-    }
-
-    nav a:hover {
-        background-color: #f0f0f0;
-    }
-
-    .container {
+        flex-wrap: wrap;
+        gap: 20px;
         max-width: 1200px;
         margin: 40px auto;
         padding: 0 20px;
     }
-
-    section {
-        margin-bottom: 50px;
-    }
-
-    section h3 {
-        border-bottom: 2px solid #333;
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-        font-size: 1.5em;
-    }
-
-    section h4 {
-        margin-bottom: 10px;
-        margin-top: 20px;
-        font-size: 1.2em;
-    }
-
-    section p, section li {
-        font-size: 1em;
-        margin-bottom: 10px;
-    }
-
-    ul {
-        padding-left: 20px;
-    }
-
-    /* Flex sekcije sa blagim okvirima */
-    .flex-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        margin-top: 20px;
-    }
-
     .flex-item {
-        flex: 1;
-        min-width: 300px;
-        background-color: #fff;
+        flex: 1 1 250px;
         padding: 20px;
-        border: 1px solid #ccc;
-        box-shadow: 1px 1px 5px rgba(0,0,0,0.05);
-        border-radius: 5px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
+    .flex-item h3 {
+        margin-top: 0;
+    }
     footer {
         text-align: center;
-        padding: 30px 20px;
-        background-color: #f8f8f8;
-        border-top: 1px solid #ccc;
+        padding: 30px 10px;
+        background-color: #f1f1f1;
     }
-
-    footer a {
+    footer p, footer a {
+        margin: 5px 0;
+        color: #000;
         text-decoration: none;
-        color: #111;
     }
 
-    @media (max-width: 992px) {
+    /* Mobilne prilagodbe */
+    @media (max-width: 600px) {
+        header h1.site-title {
+            font-size: 2em; /* manji natpis VUKOVIĆ&VUKOVIĆ */
+        }
+        header h2.site-subtitle {
+            font-size: 1em; /* manji podnaslov advokatska kancelarija */
+            color: #000; /* crna boja */
+        }
+        header img.logo {
+            width: 50px; /* manji logo */
+            height: auto;
+        }
         .flex-container {
             flex-direction: column;
-        }
-        nav {
-            flex-direction: column;
             align-items: center;
+            padding: 0 10px;
+        }
+        .flex-item {
+            width: 95%;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #007BFF; /* plava pozadina */
+            color: #000; /* tekst crne boje */
+        }
+        .flex-item h3 {
+            font-size: 1.2em;
+            color: #000; /* naslov sekcije crni */
+        }
+        .about {
+            padding: 0 15px;
+            font-size: 0.95em;
+        }
+        footer {
+            padding: 20px 10px;
+            font-size: 0.9em;
         }
     }
 </style>
@@ -135,138 +112,66 @@
 <body>
 
 <header>
-    <img src="logo.png" alt="Vuković&Vuković Logo">
-    <h1>VUKOVIĆ&amp;VUKOVIĆ</h1>
-    <h2>advokatska kancelarija</h2>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1 class="site-title">VUKOVIĆ&VUKOVIĆ</h1>
+    <h2 class="site-subtitle">advokatska kancelarija</h2>
 </header>
 
-<nav>
-    <a href="#gradjanskopravni">Građanskopravni sporovi</a>
-    <a href="#krivicno">Krivičnopravni postupci</a>
-    <a href="#privredno">Privredno pravo</a>
-    <a href="#drugi">Drugi pravni postupci</a>
-    <a href="#placanje">Plaćanje</a>
-    <a href="#kontakt">Kontakt</a>
-</nav>
+<div class="about">
+    <p>Kancelarija je osnovana 2000. godine i od svog početka pruža visok nivo predanosti klijentima.</p>
+    <p>U raznovrsnim pravnim problemima pružamo kvalitetnu uslugu vodeći se načelima odgovornosti i savesnosti koja su u temelju tradicije advokature.</p>
+    <p>U svojoj ponudi pružamo širok izbor pravnih usluga, a saradnja sa strankama je od prioritetnog značaja. Tokom vođenja postupka u konstantnoj smo vezi sa klijentima, pružajući im blagovremena obaveštenja o stanju njihovih predmeta.</p>
+    <p>Odnos klijent-advokat vodi se prvenstveno željama klijenta i pravnim smernicama advokata, a sve u cilju zaštite njegovih pravnih interesa.</p>
+    <p>Kao pouzdan partner, svoj rad zasnivamo na integritetu, iskustvu i efikasnosti.</p>
+    <p>Vršimo pro bono usluge i sarađujemo sa brojnim institucijama i uglednim pravnicima.</p>
+</div>
 
-<div class="container">
-
-    <!-- O nama -->
-    <section id="o-nama">
-        <p>Kancelarija je osnovana 2000. godine i od svog početka pruža visok nivo predanosti klijentima.</p>
-        <p>U raznosvrsnim pravnim problemima pružamo kvalitetnu uslugu vodeći se načelima odgovornosti i savesnosti koja su u temeljima tradicije poslovanja advokatske struke.</p>
-        <p>U svojoj ponudi pružamo širok izbor pravnih usluga, a saradnja sa strankama je od prioritetnog značaja. Tokom vođenja postupka u konstantnoj smo vezi sa klijentima pružajući im blagovremena obaveštenja o stanju njihovih predmeta. Odnos klijent-advokat vodi se prvenstveno željama klijenta i pravnim smernicama advokata, a sve u cilju zaštite njegovih pravnih interesa.</p>
-        <p>Kao pouzdan partner svoj rad zasnivamo na integritetu, iskustvu i efikasnosti.</p>
-        <p>Vršimo pro bono usluge i sarađujemo sa brojnim institucijama i uglednim pravnicima.</p>
-    </section>
-
-    <!-- Flex sekcije -->
-    <div class="flex-container">
-
-        <div class="flex-item">
-            <section id="gradjanskopravni">
-                <h3>Građanskopravni sporovi</h3>
-                <!-- Porodični, Naslednopravni, Radni, Ugovorna šteta (svi pod jednim) -->
-                <h4>Porodični sporovi</h4>
-                <ul>
-                    <li>Sporazumni razvod braka i njegove prednosti i mane</li>
-                    <li>Kako se pokreće razvod braka</li>
-                    <li>Koja su prava majke i oca</li>
-                    <li>Tužba za razvod i preljubu; razvod i starateljstvo</li>
-                    <li>Cena razvoda; visina alimentacije</li>
-                    <li>Utvrđivanje očinstva i materinstva; promena prebivališta dece</li>
-                    <li>Saglasnost drugog roditelja za odlazak dece u inostranstvo; deoba zajedničke imovine</li>
-                    <li>Izdvajanje stvari iz zajedničke imovine supružnika</li>
-                    <li>Nasilje u porodici; privremena mera; zabrana prilaska i kontaktiranja</li>
-                    <li>Nadležnost suda u Beogradu</li>
-                    <li>Većina pitanja iz porodičnih sporova, pitanja parničnih i vanparničnih postupaka regulisana je Porodičnim zakonom. Odgovor na pitanja i ishod postupaka zavisi od konkretnih okolnosti. Pravni zastupnik vodi klijenta kroz postupak zastupajući njegove interese.</li>
-                </ul>
-
-                <h4>Naslednopravni sporovi</h4>
-                <ul>
-                    <li>Pokretanje ostavinskog postupka, procedura i troškovi, podnošenje zahteva</li>
-                    <li>Odricanje od naslednog dela, sastavljanje i poništaj testamenta</li>
-                    <li>Ugovor o doživotnom izdržavanju i regulativa nasledstva</li>
-                    <li>Pitanja naslednopravnih odnosa regulisana su Zakonom o nasleđivanju. Za uobičajene postupke bez sukoba, advokatske usluge nisu obavezne jer sud ili javni beležnik reguliše obaveze.</li>
-                </ul>
-
-                <h4>Radni sporovi</h4>
-                <ul>
-                    <li>Otkazni rok, razlozi za otkaz, oblici ugovora o radu</li>
-                    <li>Raskid ugovora o radu, zaštita zaposlenih, mobing</li>
-                    <li>Povreda na radu i profesionalno oboljenje; sindikalna zaštita</li>
-                    <li>Izrada pravilnika i kolektivnog ugovora</li>
-                    <li>Pitanja iz radnih odnosa regulisana su Zakonom o radu. Zaposleni i poslodavci treba da poznaju svoja prava i obaveze. Svoja prava ostvaruju u radnom sporu ili upravnom postupku kod državnih institucija.</li>
-                </ul>
-
-                <h4>Ugovorna šteta</h4>
-                <ul>
-                    <li>Raskid ugovora: jednostrani ili sporazumni</li>
-                    <li>Poništaj ugovora o poklonu/kupoprodaji/zakupu</li>
-                    <li>Povraćaj ili zamena stvari</li>
-                    <li>Šteta nastala neispunjenjem ugovora i naknada</li>
-                    <li>Ugovorni odnosi regulisani su Zakonom o obligacionim odnosima. Poznavanje prava omogućava nadoknadu štete ili ispunjenje obaveza od strane druge strane.</li>
-                </ul>
-            </section>
-        </div>
-
-        <div class="flex-item">
-            <section id="krivicno">
-                <h3>Krivičnopravni postupci</h3>
-                <ul>
-                    <li>Konsultacije i zastupanje optuženih</li>
-                    <li>Stručni saveti i efikasno zastupanje u krivičnim postupcima</li>
-                    <li>Podnošenje privatnih krivičnih tužbi u ime oštećenih</li>
-                    <li>Zastupanje maloletnika u krivičnim i prekršajnim postupcima</li>
-                    <li>Posete u pritvoru i zahtevi za puštanje</li>
-                    <li>Odbrana pred MUP, javnim tužilaštvom i sudom</li>
-                    <li>Zastupanje oštećenih strana i traženje naknade štete</li>
-                </ul>
-            </section>
-
-            <section id="privredno">
-                <h3>Privredno pravo i zastupanje privrednih društava</h3>
-                <ul>
-                    <li>Osnivanje, registracija i zastupanje pravnih lica</li>
-                    <li>Privredni sporovi i korporativno savetovanje</li>
-                    <li>Stečajni postupci i zastupanje poverilaca i dužnika</li>
-                    <li>Mere u stečaju, likvidaciji i bankrotu</li>
-                    <li>Osiguranje potraživanja kroz ručnu zalogu i hipoteku</li>
-                    <li>Pravna analiza, donošenje akata i sprovođenje statusnih promena</li>
-                    <li>Finansijske transakcije i pregovori sa trećim licima</li>
-                </ul>
-            </section>
-
-            <section id="drugi">
-                <h3>Drugi pravni postupci</h3>
-
-                <h4>Upravni postupci</h4>
-                <p>U oblasti upravnog prava, naša kancelarija pruža stručnu podršku klijentima u interakciji sa državnim organima, u skladu sa Zakonom o opštem upravnom postupku. Usluge uključuju podnošenje zahteva, zastupanje u postupcima, žalbe, konsultacije i e-upravu, sa fokusom na efikasnost i minimizaciju rizika.</p>
-
-                <h4>Postupci pred katastrom</h4>
-                <p>Specijalizovani smo za postupke pred RGZ i službama katastara nepokretnosti, uključujući elektronsko podnošenje zahteva i sertifikovanu proceduru eKatastar. Usluge obuhvataju upis i izmene prava, zastupanje u katastarskim postupcima, rešavanje sporova, geodetske usluge i konsultacije o imovinskim pravima.</p>
-            </section>
-        </div>
-
+<div class="flex-container">
+    <!-- Građanskopravni sporovi -->
+    <div class="flex-item">
+        <h3>Građanskopravni sporovi</h3>
+        <p><strong>Porodični sporovi:</strong> Sporazumni razvod braka i njegove prednosti i mane; Kako se pokreće razvod braka; Prava majke i oca; Tužba za razvod i preljubu; Razvod i starateljstvo; Cena razvoda; Visina alimentacije; Utvrđivanje očinstva i materinstva; Promena prebivališta dece; Saglasnost drugog roditelja za odlazak dece u inostranstvo; Deoba zajedničke imovine; Izdvajanje stvari iz zajedničke imovine; Nasilje u porodici; Privremena mera; Zabrana prilaska i kontaktiranja; Koji sud je nadležan za Beograd. Većina pitanja iz porodičnih sporova regulisana je Porodičnim zakonom.</p>
+        <p><strong>Naslednopravni sporovi:</strong> Pokretanje ostavinskog postupka, procedura, troškovi, podnošenje zahteva; Odircanje od naslednog dela; Kako se izjasniti na ostavinskoj raspravi; Koji sud je nadležan; Sastavljanje testamenta; Poništaj testamenta; Nužni nasledni deo; Ugovor o doživotnom izdržavanju. Pitanja naslednopravnih odnosa regulisana su Zakonom o nasleđivanju.</p>
+        <p><strong>Radni sporovi:</strong> Otkazni rok, razlozi za otkaz, oblici ugovora o radu; Raskid ugovora o radu; Zaštita zaposlenog; Povreda na radu i profesionalno oboljenje; Sindikati; Pravilnici i kolektivni ugovori. Pitanja iz radnih odnosa regulisana su Zakonom o Radu.</p>
+        <p><strong>Ugovorna šteta:</strong> Kako se raskida ugovor; Poništaj ugovora o poklonu/kupoprodaji/zakupu; Povraćaj/zamena stvari; Šteta nastala neispunjenjem ugovora; Tužba za izvršenje/poništaj ugovora; Sklapanje ugovora od strane više lica. Ugovorni odnosi regulisani su Zakonom o obligacionim odnosima.</p>
     </div>
 
-    <section id="placanje">
+    <!-- Krivičnopravni postupci -->
+    <div class="flex-item">
+        <h3>Krivičnopravni postupci</h3>
+        <p>U oblasti krivičnog prava, naš tim pruža sveobuhvatne pravne usluge sa fokusom na zaštitu prava klijenata u svim fazama krivičnog postupka. Usluge uključuju konsultacije i zastupanje optuženih; podnošenje privatnih krivičnih tužbi; zastupanje maloletnika; posete u pritvoru i zahtevi za puštanje; odbranu pred MUP-om, tužilaštvom i sudom; zastupanje oštećenih strana.</p>
+        <p>Pristup je personalizovan, uz poštovanje etičkih standarda advokature i maksimalnu diskreciju.</p>
+    </div>
+
+    <!-- Privredno pravo -->
+    <div class="flex-item">
+        <h3>Privredno pravo i zastupanje privrednih društava</h3>
+        <p>U oblasti privrednog prava, specijalizovani smo za podršku pravnim licima u svim aspektima poslovanja, od osnivanja do rešavanja složenih sporova. Usluge uključuju osnivanje, registraciju i zastupanje pravnih lica; privredni sporovi i korporativno savetovanje; stečajni postupci; mere u stečaju, likvidaciji i bankrotu; osiguranje potraživanja; pravna analiza i sprovođenje statusnih promena; finansijske transakcije i pregovori.</p>
+    </div>
+
+    <!-- Drugi pravni postupci -->
+    <div class="flex-item">
+        <h3>Drugi pravni postupci</h3>
+        <p><strong>Upravni postupci:</strong> Zastupanje i podrška klijentima u interakciji sa državnim organima; podnošenje zahteva i iniciranje postupaka; zastupanje u upravnim postupcima; žalbe na upravne akte; stručne konsultacije; zastupanje u inspekcijskim nadzorima; e-uprava i elektronski postupci.</p>
+        <p><strong>Postupci pred katastrom:</strong> Specijalizovani za RGZ i katastar nepokretnosti; upis i izmene u katastru; zastupanje u katastarskim postupcima; elektronsko podnošenje zahteva; rešavanje sporova oko nepokretnosti; geodetske usluge i konsultacije; postupci u vezi infrastrukture.</p>
+    </div>
+
+    <div class="flex-item">
         <h3>Plaćanje</h3>
-        <p>Česta pitanja u vezi pravnih problema su: da li advokati rade na procenat, koliko koštaju konsultacije i pravni saveti, advokatska tarifa, troškovi tužbe, ugovora, zastupanja i pisanja. Plaćanje pravnih usluga regulisano je advokatskim tarifnikom, ali uvek može biti dogovor sa klijentom. Pro bono rad je moguć za klijente sa dugom saradnjom ili kompleksnim slučajevima.</p>
-    </section>
+        <p>Česta pitanja u vezi plaćanja advokatskih usluga: rad na procenat, konsultacije, pravni saveti, advokatska tarifa, cena tužbe, ugovora i zastupanja. Plaćanje regulisano tarifnikom, ali uvek može biti dogovoreno. Pro bono rad za dugogodišnje klijente ili kompleksne slučajeve.</p>
+    </div>
 
-    <section id="kontakt">
+    <div class="flex-item">
         <h3>Kontakt</h3>
-        <p>Saša Vuković: +381642092029<br>Email: advsasavukovic@gmail.com</p>
-        <p>Ivana Vuković: +381603384016<br>Email: advivana.vukovic@gmail.com</p>
-        <p>Mileva Vuković: +381641661188<br>Email: mileva.vuković@gmail.com</p>
-        <p>Adresa: Ulica Kneza Miloša 95, Beograd, Srbija</p>
-    </section>
-
+        <p>Saša Vuković: +381642092029<br>advsasavukovic@gmail.com</p>
+        <p>Ivana Vuković: +381603384016<br>advivana.vukovic@gmail.com</p>
+        <p>Mileva Vuković: +381641661188<br>mileva.vuković@gmail.com</p>
+        <p>Ulica Kneza Miloša 95, Beograd, Srbija</p>
+    </div>
 </div>
 
 <footer>
-    &copy; 2026 Vuković&Vuković. Sva prava zadržana.
+    <p>&copy; 2026 VUKOVIĆ&VUKOVIĆ. Sva prava zadržana.</p>
 </footer>
 
 </body>
