@@ -3,162 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advokatska Kancelarija Vuković & Vuković</title>
+  <title>Vuković & Vuković | Advokatska kancelarija</title>
   <style>
     body {
       font-family: "Times New Roman", Times, serif;
       margin: 0;
       padding: 0;
-      line-height: 1.7;
-      color: #2c2c2c;
-      background-color: #fefefe;
-      scroll-behavior: smooth;
+      line-height: 1.6;
+      color: #111;
+      background-color: #fff;
     }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px 50px;
-      background-color: #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       position: sticky;
       top: 0;
       z-index: 100;
+      flex-wrap: wrap;
     }
-
+    header div.centered {
+      text-align: center;
+      flex: 1 1 100%;
+      margin-bottom: 10px;
+    }
+    header .centered .title {
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    header .centered .subtitle {
+      font-size: 16px;
+      margin-top: 4px;
+    }
     .logo img {
       height: 60px;
-      margin-right: 50px;
     }
-
     nav {
       display: flex;
-      gap: 30px;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-
     nav a {
-      font-weight: 600;
-      transition: color 0.3s, transform 0.2s;
-      position: relative;
+      text-decoration: none;
+      color: #111;
+      font-weight: bold;
+      padding: 6px 12px;
+      transition: 0.3s;
     }
-
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background-color: #0073e6;
-      left: 0;
-      bottom: -5px;
-      transition: width 0.3s;
+    nav a:hover {
+      background-color: #f0f0f0;
+      border-radius: 4px;
     }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
       gap: 5px;
     }
-
     .hamburger div {
-      width: 28px;
+      width: 25px;
       height: 3px;
-      background-color: #2c2c2c;
-      border-radius: 2px;
+      background-color: #111;
     }
-
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    #kontakt p, #kontakt a {
+      margin: 5px 0;
+    }
     @media (max-width: 768px) {
       nav {
         display: none;
         flex-direction: column;
+        gap: 10px;
+        background-color: #fff;
         position: absolute;
-        top: 80px;
-        right: 50px;
-        background-color: #ffffff;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        border-radius: 8px;
+        top: 100px;
+        width: 100%;
+        left: 0;
         padding: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       }
-
       nav.show {
         display: flex;
       }
-
       .hamburger {
         display: flex;
       }
-    }
-
-    /* Sections as elegant cards */
-    section {
-      padding: 40px 30px;
-      max-width: 1000px;
-      margin: 40px auto;
-      background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease-out;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    section:nth-of-type(even) {
-      background-color: #f9f9f9;
-    }
-
-    section h2 {
-      color: #0073e6;
-      border-bottom: 2px solid #0073e6;
-      display: inline-block;
-      padding-bottom: 6px;
-      margin-bottom: 25px;
-      font-size: 28px;
-    }
-
-    section p {
-      margin-bottom: 18px;
-      text-align: justify;
-      font-size: 16px;
-    }
-
-    footer {
-      background-color: #f5f5f5;
-      padding: 50px 20px;
-      text-align: center;
-      font-size: 14px;
-      color: #555;
-      border-top: 1px solid #e1e1e1;
     }
   </style>
 </head>
 <body>
 
 <header>
+  <div class="centered">
+    <div class="title">VUKOVIĆ&amp;VUKOVIĆ</div>
+    <div class="subtitle">advokatska kancelarija</div>
+  </div>
   <div class="logo">
     <img src="logo.png" alt="Advokatska Kancelarija Vuković & Vuković">
   </div>
-
   <div class="hamburger" onclick="toggleMenu()">
     <div></div>
     <div></div>
     <div></div>
   </div>
-
   <nav id="nav-links">
     <a href="#o-nama">O nama</a>
     <a href="#porodicni-sporovi">Porodični sporovi</a>
@@ -172,65 +138,88 @@
 
 <section id="o-nama">
   <h2>O nama</h2>
-  <p>Kancelarija je osnovana 2000. godine i od svog početka pruža visok nivo predanosti klijentima. U raznovrsnim pravnim problemima pružamo kvalitetnu uslugu vodeći se načelima odgovornosti i savesnosti koja su u temelju tradicije poslovanja advokatske struke.</p>
+  <p>Kancelarija je osnovana 2000. godine i od svog početka pruža visok nivo predanosti klijentima.</p>
+  <p>U raznovrsnim pravnim problemima pružamo kvalitetnu uslugu vodeći se načelima odgovornosti i savesnosti koja su u temelju tradicije poslovanja advokatske struke.</p>
   <p>U svojoj ponudi pružamo širok izbor pravnih usluga, a saradnja sa strankama je od prioritetnog značaja. Tokom vođenja postupka u konstantnoj smo vezi sa klijentima pružajući im blagovremena obaveštenja o stanju njihovih predmeta.</p>
-  <p>Odnos klijent-advokat vodi se prvenstveno željama klijenta i pravnim smernicama advokata, a sve u cilju zaštite njegovih pravnih interesa. Kao pouzdan partner, svoj rad zasnivamo na integritetu, iskustvu i efikasnosti.</p>
+  <p>Odnos klijent-advokat vodi se prvenstveno željama klijenta i pravnim smernicama advokata, sve u cilju zaštite njegovih pravnih interesa.</p>
+  <p>Kao pouzdan partner svoj rad zasnivamo na integritetu, iskustvu i efikasnosti.</p>
   <p>Vršimo pro bono usluge i sarađujemo sa brojnim institucijama i uglednim pravnicima.</p>
 </section>
 
 <section id="porodicni-sporovi">
   <h2>Porodični sporovi</h2>
-  <p>Većina pitanja iz porodičnih sporova, kao i parničnih i vanparničnih postupaka, regulisana je Porodičnim zakonom. Ishod postupaka zavisi od okolnosti konkretnog slučaja. Za većinu pravnih problema preporučuje se angažovanje pravnog zastupnika koji vodi klijenta kroz postupak, zastupa njegove interese i pruža smernice kako da svoje zahteve postavi i uspešno brani.</p>
+  <ul>
+    <li>Sporazumni razvod braka – prednosti i mane, pokretanje razvoda</li>
+    <li>Prava majke, prava supružnika</li>
+    <li>Tužba za razvod i preljuba; razvod i starateljstvo</li>
+    <li>Cena razvoda; Visina alimentacije</li>
+    <li>Utvrđivanje očinstva i materinstva; Promena prebivališta dece</li>
+    <li>Saglasnost drugog roditelja za odlazak dece u inostranstvo</li>
+    <li>Deoba zajedničke imovine; Izdvajanje stvari iz zajedničke imovine supružnika</li>
+    <li>Nasilje u porodici; Privremena mera; Zabrana prilaska i kontaktiranja</li>
+    <li>Nadležni sudovi – Beograd i ostali regioni</li>
+    <li>Većina pitanja iz porodičnih sporova, pitanja parničnih i vanparničnih postupaka regulisana je Porodičnim zakonom. Rezultat postupaka u najvećoj meri zavisi od okolnosti konkretnog slučaja. Korisno je imati pravnog zastupnika koji vodi klijenta kroz postupak zastupajući njegove pravne interese, obučavajući ga i upućujući u smeru da svoje zahteve postavi i brani.</li>
+  </ul>
 </section>
 
 <section id="naslednopravni-sporovi">
   <h2>Naslednopravni sporovi</h2>
-  <p>Pitanja naslednopravnih odnosa i sporova regulisana su Zakonom o nasleđivanju. Za standardne postupke, bez sukoba u vezi sa pripadnošću naslednog dela, angažovanje advokata nije neophodno, jer sud ili javni beležnik regulišu sve formalnosti i obaveze.</p>
+  <ul>
+    <li>Pokretanje ostavinskog postupka, procedura, troškovi, podnošenje zahteva</li>
+    <li>Odbijanje od naslednog dela, izjašnjenje na ostavinskoj raspravi, sudska nadležnost</li>
+    <li>Sastavljanje testamenta; Poništaj testamenta; Nužni nasledni deo</li>
+    <li>Ugovor o doživotnom izdržavanju – uticaj na nasledstvo, poništaj ugovora</li>
+    <li>Pitanja naslednopravnih odnosa regulisana Zakonom o nasleđivanju. Za uobičajene postupke, gde ne dolazi do sukoba u pripadnosti naslednog dela, ne postoji potreba za advokatskim zastupanjem jer su prava regulisana sudom ili javnim beležnikom.</li>
+  </ul>
 </section>
 
 <section id="radni-sporovi">
   <h2>Radni sporovi</h2>
-  <p>Pitanja iz radnih odnosa i sporova regulisana su Zakonom o radu. Važno je da zaposleni i poslodavci poznaju svoja prava i obaveze predviđena zakonom i ugovorima. Svoja prava mogu ostvariti u radnom sporu, a pored toga mogu pokrenuti i upravni postupak kada je poslodavac državna, pokrajinska ili gradska institucija.</p>
+  <ul>
+    <li>Otkazni rokovi i razlozi za otkaz; Oblici ugovora o radu</li>
+    <li>Raskid ugovora o radu; Zaštita zaposlenog usled otkaza i mobing</li>
+    <li>Povreda na radu i profesionalno oboljenje; Zaštita zaposlenih i osnivanje sindikata</li>
+    <li>Pravilnici i kolektivni ugovori</li>
+    <li>Pitanja iz radnih odnosa regulisana Zakonom o Radu. Važno je da zaposleni i poslodavci poznaju svoja prava i obaveze. Pored radnog spora, moguće je pokrenuti i upravni postupak kada je poslodavac državna, pokrajinska ili gradska institucija.</li>
+  </ul>
 </section>
 
 <section id="ugovorna-steta">
   <h2>Ugovorna šteta</h2>
-  <p>Ugovorni odnosi uglavnom se regulišu Zakonom o obligacionim odnosima. Poznavanje prava omogućava ugovornoj strani da neispunjene obaveze, nastalu štetu ili drugačije izvršenje nadomesti odgovarajućim zahtevom za ispunjenje, zamenu ili naknadu štete.</p>
+  <ul>
+    <li>Raskid ugovora – jednostrani ili sporazumni</li>
+    <li>Poništaj ugovora o poklonu, kupoprodaji, zakupu</li>
+    <li>Povraćaj ili zamena stvari</li>
+    <li>Nastala šteta i naknada; Tužba za izvršenje ili poništaj ugovora</li>
+    <li>Sklapanje ugovora od strane više lica</li>
+    <li>Ugovorni odnosi regulisani Zakonom o obligacionim odnosima. Poznavanje prava omogućava adekvatno nadoknađivanje štete, ispunjenje ili zamenu ugovornih obaveza.</li>
+  </ul>
 </section>
 
 <section id="placanje">
   <h2>Plaćanje</h2>
-  <p>Česta pitanja uključuju način plaćanja advokatskih usluga: da li se radi na procenat, koliko koštaju konsultacije, pravni saveti, advokatska tarifa, cena tužbe, ugovora, zastupanja ili pro bono opcije.</p>
-  <p>Plaćanje se reguliše advokatskim tarifnikom, ali može biti predmet dogovora. Pro bono rad se primenjuje kod dugogodišnje saradnje ili kada složenost slučaja nalaže prilagođavanje usluga klijentu.</p>
+  <ul>
+    <li>Česta pitanja: da li advokati rade na procenat, cena konsultacija i pravnog saveta, advokatska tarifa, cena tužbe, ugovora i zastupanja</li>
+    <li>Pitanje plaćanja regulisano advokatskim tarifnikom, ali se može dogovoriti sa klijentom</li>
+    <li>Pro bono rad je moguć za dugoročne klijente i kompleksne slučajeve gde etika nalaže pružanje pomoći</li>
+  </ul>
 </section>
 
 <section id="kontakt">
   <h2>Kontakt</h2>
-  <p>Telefon: +381642092029, +381641661188</p>
-  <p>Email: info@sasavukovic-law.rs</p>
-  <p>Adresa: Beograd, Srbija</p>
+  <p><strong>Saša Vuković</strong> – +381642092029<br>
+     advsasavukovic@gmail.com</p>
+  <p><strong>Ivana Vuković</strong> – +381603384016<br>
+     advivana.vukovic@gmail.com</p>
+  <p><strong>Mileva Vuković</strong> – +381641661188<br>
+     mileva.vukovic@gmail.com</p>
+  <p>Adresa: Ulica Kneza Miloša 95, Beograd, Srbija</p>
 </section>
 
-<footer>
-  &copy; 2026 Advokatska Kancelarija Vuković & Vuković. Sva prava zadržana.
-</footer>
-
 <script>
-  function toggleMenu() {
-    document.getElementById('nav-links').classList.toggle('show');
-  }
-
-  // Animacija sekcija prilikom skrolovanja
-  const sections = document.querySelectorAll('section');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  sections.forEach(section => observer.observe(section));
+function toggleMenu() {
+  document.getElementById("nav-links").classList.toggle("show");
+}
 </script>
 
 </body>
