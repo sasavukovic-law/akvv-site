@@ -60,7 +60,7 @@
     }
 
     .container {
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 40px auto;
         padding: 0 20px;
     }
@@ -95,7 +95,7 @@
     .flex-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 40px;
+        gap: 30px;
         margin-top: 20px;
     }
 
@@ -121,13 +121,13 @@
         color: #111;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
+        .flex-container {
+            flex-direction: column;
+        }
         nav {
             flex-direction: column;
             align-items: center;
-        }
-        .flex-container {
-            flex-direction: column;
         }
     }
 </style>
@@ -141,18 +141,18 @@
 </header>
 
 <nav>
-    <a href="#o-nama">O nama</a>
     <a href="#gradjanskopravni">Građanskopravni sporovi</a>
     <a href="#krivicno">Krivičnopravni postupci</a>
     <a href="#privredno">Privredno pravo</a>
+    <a href="#drugi">Drugi pravni postupci</a>
     <a href="#placanje">Plaćanje</a>
     <a href="#kontakt">Kontakt</a>
 </nav>
 
 <div class="container">
 
+    <!-- O nama -->
     <section id="o-nama">
-        <h3>O nama</h3>
         <p>Kancelarija je osnovana 2000. godine i od svog početka pruža visok nivo predanosti klijentima.</p>
         <p>U raznosvrsnim pravnim problemima pružamo kvalitetnu uslugu vodeći se načelima odgovornosti i savesnosti koja su u temeljima tradicije poslovanja advokatske struke.</p>
         <p>U svojoj ponudi pružamo širok izbor pravnih usluga, a saradnja sa strankama je od prioritetnog značaja. Tokom vođenja postupka u konstantnoj smo vezi sa klijentima pružajući im blagovremena obaveštenja o stanju njihovih predmeta. Odnos klijent-advokat vodi se prvenstveno željama klijenta i pravnim smernicama advokata, a sve u cilju zaštite njegovih pravnih interesa.</p>
@@ -160,13 +160,13 @@
         <p>Vršimo pro bono usluge i sarađujemo sa brojnim institucijama i uglednim pravnicima.</p>
     </section>
 
-    <!-- Flex sekcije pored sebe -->
+    <!-- Flex sekcije -->
     <div class="flex-container">
 
         <div class="flex-item">
             <section id="gradjanskopravni">
                 <h3>Građanskopravni sporovi</h3>
-
+                <!-- Porodični, Naslednopravni, Radni, Ugovorna šteta (svi pod jednim) -->
                 <h4>Porodični sporovi</h4>
                 <ul>
                     <li>Sporazumni razvod braka i njegove prednosti i mane</li>
@@ -179,48 +179,47 @@
                     <li>Izdvajanje stvari iz zajedničke imovine supružnika</li>
                     <li>Nasilje u porodici; privremena mera; zabrana prilaska i kontaktiranja</li>
                     <li>Nadležnost suda u Beogradu</li>
-                    <li>Većina pitanja iz porodičnih sporova, pitanja parničnih i vanparničnih postupaka regulisana je Porodičnim zakonom. Odgovor na pitanja, kao i rezultat pokrenutih postupaka u najvećoj meri zavisi od okolnosti konkretnog slučaja. Za većinu pomenutih pravnih problema korisno je imati pravnog zastupnika koji će klijenta voditi kroz postupak zastupajući njegove pravne interese, obučavajući ga i upućujući u smeru da svoje zahteve postavi i iste brani.</li>
+                    <li>Većina pitanja iz porodičnih sporova, pitanja parničnih i vanparničnih postupaka regulisana je Porodičnim zakonom. Odgovor na pitanja i ishod postupaka zavisi od konkretnih okolnosti. Pravni zastupnik vodi klijenta kroz postupak zastupajući njegove interese.</li>
                 </ul>
 
                 <h4>Naslednopravni sporovi</h4>
                 <ul>
                     <li>Pokretanje ostavinskog postupka, procedura i troškovi, podnošenje zahteva</li>
-                    <li>Odricanje od naslednog dela, šta ako se ne dođe na raspravu</li>
-                    <li>Sastavljanje testamenta; poništaj testamenta; nužni nasledni deo</li>
-                    <li>Ugovor o doživotnom izdržavanju i njegova regulativa</li>
-                    <li>Pitanja naslednopravnih odnosa i sporova regulisana su Zakonom o nasleđivanju. Za uobičajne naslednopravne postupke, gde ne dolazi do sukoba po pitanju pripadanja naslednog dela i lica koja nasleđuju, ne postoji potreba za advokatskim uslugama, jer sva pitanja i obaveze reguliše sud ili javni beležnik.</li>
+                    <li>Odricanje od naslednog dela, sastavljanje i poništaj testamenta</li>
+                    <li>Ugovor o doživotnom izdržavanju i regulativa nasledstva</li>
+                    <li>Pitanja naslednopravnih odnosa regulisana su Zakonom o nasleđivanju. Za uobičajene postupke bez sukoba, advokatske usluge nisu obavezne jer sud ili javni beležnik reguliše obaveze.</li>
                 </ul>
 
                 <h4>Radni sporovi</h4>
                 <ul>
-                    <li>Koji je otkazni rok, razlozi za otkaz, oblici ugovora o radu</li>
-                    <li>Kako se raskida ugovor o radu, zaštita zaposlenog usled otkaza i mobing</li>
-                    <li>Povreda na radu i profesionalno oboljenje; zaštita zaposlenih i osnivanje sindikata</li>
-                    <li>Izrada pravilnika i kolektivnog ugovora o radu</li>
-                    <li>Pitanja iz radnih odnosa i sporova regulisani su Zakonom o radu. Korisno je da i zaposleni i poslodavac poznaju zakonske i ugovorom predviđene obaveze i prava koja im zakon garantuje. Svoja prava ostvaruju u radnom sporu, a pored toga moguće je pokrenuti i upravni postupak kod državnih ili lokalnih institucija.</li>
+                    <li>Otkazni rok, razlozi za otkaz, oblici ugovora o radu</li>
+                    <li>Raskid ugovora o radu, zaštita zaposlenih, mobing</li>
+                    <li>Povreda na radu i profesionalno oboljenje; sindikalna zaštita</li>
+                    <li>Izrada pravilnika i kolektivnog ugovora</li>
+                    <li>Pitanja iz radnih odnosa regulisana su Zakonom o radu. Zaposleni i poslodavci treba da poznaju svoja prava i obaveze. Svoja prava ostvaruju u radnom sporu ili upravnom postupku kod državnih institucija.</li>
                 </ul>
 
                 <h4>Ugovorna šteta</h4>
                 <ul>
-                    <li>Kako se raskida ugovor? Jednostrani ili sporazumni raskid</li>
+                    <li>Raskid ugovora: jednostrani ili sporazumni</li>
                     <li>Poništaj ugovora o poklonu/kupoprodaji/zakupu</li>
                     <li>Povraćaj ili zamena stvari</li>
                     <li>Šteta nastala neispunjenjem ugovora i naknada</li>
-                    <li>Tužba za izvršenje/poništaj ugovora; sklapanje ugovora od strane više lica</li>
-                    <li>Ugovorni odnosi regulisani su Zakonom o obligacionim odnosima. Poznavanje prava koja proističu iz ugovora omogućava nadoknadu nastale štete ili ispunjenje obaveza od strane druge ugovorne strane.</li>
+                    <li>Ugovorni odnosi regulisani su Zakonom o obligacionim odnosima. Poznavanje prava omogućava nadoknadu štete ili ispunjenje obaveza od strane druge strane.</li>
                 </ul>
-            </div>
+            </section>
+        </div>
 
         <div class="flex-item">
             <section id="krivicno">
                 <h3>Krivičnopravni postupci</h3>
                 <ul>
                     <li>Konsultacije i zastupanje optuženih</li>
-                    <li>Stručni saveti i efikasno zastupanje optuženih u krivičnim postupcima</li>
-                    <li>Podnošenje privatnih krivičnih tužbi u ime oštećenih strana</li>
+                    <li>Stručni saveti i efikasno zastupanje u krivičnim postupcima</li>
+                    <li>Podnošenje privatnih krivičnih tužbi u ime oštećenih</li>
                     <li>Zastupanje maloletnika u krivičnim i prekršajnim postupcima</li>
                     <li>Posete u pritvoru i zahtevi za puštanje</li>
-                    <li>Odbrana pred MUP-om, Javnim tužilaštvom i sudom</li>
+                    <li>Odbrana pred MUP, javnim tužilaštvom i sudom</li>
                     <li>Zastupanje oštećenih strana i traženje naknade štete</li>
                 </ul>
             </section>
@@ -238,6 +237,15 @@
                 </ul>
             </section>
 
+            <section id="drugi">
+                <h3>Drugi pravni postupci</h3>
+
+                <h4>Upravni postupci</h4>
+                <p>U oblasti upravnog prava, naša kancelarija pruža stručnu podršku klijentima u interakciji sa državnim organima, u skladu sa Zakonom o opštem upravnom postupku. Usluge uključuju podnošenje zahteva, zastupanje u postupcima, žalbe, konsultacije i e-upravu, sa fokusom na efikasnost i minimizaciju rizika.</p>
+
+                <h4>Postupci pred katastrom</h4>
+                <p>Specijalizovani smo za postupke pred RGZ i službama katastara nepokretnosti, uključujući elektronsko podnošenje zahteva i sertifikovanu proceduru eKatastar. Usluge obuhvataju upis i izmene prava, zastupanje u katastarskim postupcima, rešavanje sporova, geodetske usluge i konsultacije o imovinskim pravima.</p>
+            </section>
         </div>
 
     </div>
