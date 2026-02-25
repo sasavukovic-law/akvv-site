@@ -3,165 +3,239 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Advokatska kancelarija VUKOVIĆ & VUKOVIĆ</title>
-
+<title>Advokatska kancelarija Vuković & Vuković</title>
 <style>
-body {
+  body {
+    font-family: "Times New Roman", serif;
+    background-color: #fff;
+    color: #000;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
-    color: #000000;
-    line-height: 1.6;
-}
-
-header {
-    background: #000;
-    color: #fff;
-    text-align: center;
-    padding: 60px 20px;
-}
-
-header h1 {
-    font-size: 40px;
-    letter-spacing: 3px;
-    margin: 0;
-}
-
-nav {
-    text-align: center;
+    padding: 0;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 20px;
-    border-bottom: 1px solid #ddd;
-}
-
-nav a {
-    margin: 0 15px;
+    border-bottom: 1px solid #000;
+  }
+  header img {
+    width: 150px;
+    height: auto;
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
-}
-
-section {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-h2 {
-    border-bottom: 2px solid #000;
-    padding-bottom: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 40px;
+  }
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
     background: #000;
-    color: #fff;
-    margin-top: 60px;
-}
+    margin: 4px 0;
+  }
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .menu-toggle {
+      display: flex;
+    }
+    nav.active {
+      display: flex;
+    }
+  }
+  section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  h1, h2, h3 {
+    margin-bottom: 20px;
+  }
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .grid > div {
+    flex: 1 1 300px;
+    border: 1px solid #000;
+    padding: 20px;
+  }
+  ul {
+    padding-left: 20px;
+  }
 </style>
 </head>
-
 <body>
 
 <header>
-<h1>ADVOKATSKA KANCELARIJA<br>VUKOVIĆ & VUKOVIĆ</h1>
+  <img src="logo.png" alt="Logo">
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav id="nav">
+    <a href="#o-nama">O NAMA</a>
+    <a href="#porodicni">Porodični sporovi</a>
+    <a href="#nasledno">Naslednopravni sporovi</a>
+    <a href="#radni">Radni sporovi</a>
+    <a href="#ugovorna">Ugovorna šteta</a>
+    <a href="#placanje">Plaćanje</a>
+    <a href="#oblasti">Oblasti pravnih usluga</a>
+    <a href="#nas-tim">Naš tim</a>
+    <a href="#blog">Blogovi</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
 </header>
 
-<nav>
-<a href="#onama">O NAMA</a>
-<a href="#oblasti">OBLASTI</a>
-<a href="#sporovi">SPOROVI</a>
-<a href="#tim">NAŠ TIM</a>
-<a href="#blog">BLOG</a>
-<a href="#kontakt">KONTAKT</a>
-</nav>
+<section id="uvod">
+  <h1>Advokatska kancelarija<br>VUKOVIĆ & VUKOVIĆ</h1>
+</section>
 
-<section id="onama">
-<h2>O NAMA</h2>
-<p>KANCELARIJA JE OSNOVANA 2000. GODINE I OD SVOG POČETKA PRUŽA VISOK NIVO PREDANOSTI KLIJENTIMA.</p>
-<p>U RAZNOVRSNIM PRAVNIM PROBLEMIMA PRUŽAMO KVALITETNU USLUGU VODEĆI SE NAČELIMA ODGOVORNOSTI I SAVESNOSTI KOJA SU U TEMELJIMA TRADICIJE POSLOVANJA ADVOKATSKE STRUKE.</p>
-<p>U SVOJOJ PONUDI PRUŽAMO ŠIROK IZBOR PRAVNIH USLUGA, A SARADNJA SA STRANKAMA JE OD PRIORITETNOG ZNAČAJA.</p>
-<p>KAO POUZDAN PARTNER SVOJ RAD ZASNIVAMO NA INTEGRITETU, ISKUSTVU I EFIKASNOSTI.</p>
+<section id="o-nama">
+  <h2>O NAMA</h2>
+  <p>KANCELARIJA JE OSNOVANA 2000. GODINE I OD SVOG POČETKA PRUŽA VISOK NIVO PREDANOSTI KLIJENTIMA. U RAZNOSVRSNIM PRAVNIM PROBLEMIMA PRUŽAMO KVALITETNU USLUGU VODEĆI SE NAČELIMA ODGOVORNOSTI I SAVESNOSTI KOJA SU U TEMELJIMA TRADICIJE POSLOVANJA ADVOKATSKE STRUKE. U SVOJOJ PONUDI PRUŽAMO ŠIROK IZBOR PRAVNIH USLUGA, A SARADNJA SA STRANKAMA JE OD PRIORITETNOG ZNAČAJA...</p>
+</section>
+
+<section id="porodicni">
+  <h2>Porodični sporovi</h2>
+  <ul>
+    <li>Sporazumni razvod braka i njegove prednosti i mane</li>
+    <li>Kako se pokreće razvod braka?</li>
+    <li>Koja su prava majke? Koja su prava žene?</li>
+    <li>Tužba za razvod i preljuba; razvod i starateljstvo</li>
+    <li>Cena razvoda; Visina alimentacije</li>
+    <li>Utvrđivanje očinstva i materinstva; Promena prebivališta dece</li>
+    <li>Saglasnost drugog roditelja za odlazak dece u inostranstvo; Deoba zajedničke imovine</li>
+    <li>Izdvajanje stvari iz zajedničke imovine supružnika</li>
+    <li>Nasilje u porodici; Privremena mera; Zabrana prilaska i kontaktiranja</li>
+    <li>Koji sud je nadležan za Beograd?</li>
+  </ul>
+  <p>Većina pitanja iz porodičnih sporova regulisana je Porodičnim zakonom. Za većinu pomenutih pravnih problema korisno je imati pravnog zastupnika...</p>
+</section>
+
+<section id="nasledno">
+  <h2>Naslednopravni sporovi</h2>
+  <ul>
+    <li>Pokretanje ostavinskog postupka, troškovi, podnošenje zahteva</li>
+    <li>Odricanje od naslednog dela, kako se izjasniti na ostavinskoj raspravi</li>
+    <li>Sastavljanje testamenta od strane advokata</li>
+    <li>Poništaj testamenta, nužni nasledni deo</li>
+    <li>Ugovor o doživotnom izdržavanju</li>
+  </ul>
+  <p>Pitanja naslednopravnih odnosa regulisana su Zakonom o nasleđivanju...</p>
+</section>
+
+<section id="radni">
+  <h2>Radni sporovi</h2>
+  <ul>
+    <li>Otkazni rok i razlozi za otkaz</li>
+    <li>Kako se raskida ugovor o radu?</li>
+    <li>Zaštita zaposlenog usled otkaza i mobing</li>
+    <li>Pravilnik i kolektivni ugovor o radu</li>
+  </ul>
+</section>
+
+<section id="ugovorna">
+  <h2>Ugovorna šteta</h2>
+  <ul>
+    <li>Jednostrani i sporazumni raskid ugovora</li>
+    <li>Poništaj ugovora o poklonu/kupoprodaji/zakupu</li>
+    <li>Povraćaj, zamena stvari, naknada štete</li>
+  </ul>
+</section>
+
+<section id="placanje">
+  <h2>Plaćanje</h2>
+  <p>Plaćanje advokatskih usluga regulisano je tarifnikom, ali može biti dogovor sa klijentom. Pro bono rad je moguć za odabrane slučajeve...</p>
 </section>
 
 <section id="oblasti">
-<h2>OBLASTI KOJIM SE BAVIMO</h2>
-<p><strong>GRAĐANSKO PRAVO</strong></p>
-<p><strong>PORODIČNO PRAVO</strong></p>
-<p><strong>NASLEDNO PRAVO</strong></p>
-<p><strong>OBLIGACIONO PRAVO</strong></p>
-<p><strong>KRIVIČNO PRAVO</strong></p>
-<p><strong>PRIVREDNO PRAVO</strong></p>
-<p><strong>RADNO PRAVO</strong></p>
-</section>
-
-<section id="sporovi">
-<h2>PORODIČNI, NASLEDNI I RADNI SPOROVI</h2>
-<p>Savetovanje i zastupanje u svim vrstama parničnih, vanparničnih i upravnih postupaka.</p>
-<p>Detaljna analiza svakog slučaja i individualni pristup klijentu.</p>
-</section>
-
-<!-- Sekcija "Naš tim" -->
-<section id="nas-tim" style="font-family: 'Times New Roman', serif; background-color: #fff; color: #000; padding: 50px 20px;">
-  <h2 style="text-align: center; margin-bottom: 40px;">NAŠ TIM</h2>
-
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
-
-    <!-- Saša Vuković -->
-    <div style="flex: 1 1 300px; max-width: 300px;">
-      <h3>Advokat Saša Vuković</h3>
-      <p><strong>Obrazovanje:</strong> Diplomirani pravnik Univerziteta u Beogradu. Master iz međunarodnog prava. Položen pravosudni i advokatski ispit.</p>
-      <p><strong>Iskustvo:</strong> Građansko, radno i porodično pravo, složeni parnični postupci, vansudsko rešavanje sporova. Strategijsko planiranje svakog predmeta.</p>
-    </div>
-
-    <!-- Mileva Vuković -->
-    <div style="flex: 1 1 300px; max-width: 300px;">
-      <h3>Advokat Mileva Vuković</h3>
-      <p><strong>Obrazovanje:</strong> Diplomirani pravnik, dugogodišnje iskustvo u parničnim i privrednim sporovima.</p>
-      <p><strong>Iskustvo:</strong> Priprema postupaka, obrada činjeničnog i dokaznog materijala. Sistematičnost, odgovornost i posvećenost interesima klijenata.</p>
-    </div>
-
-    <!-- Ivana Vuković -->
-    <div style="flex: 1 1 300px; max-width: 300px;">
-      <h3>Advokat Ivana Vuković</h3>
-      <p><strong>Obrazovanje:</strong> Diplomirani pravnik Univerziteta u Beogradu. Iskustvo u upravnim postupcima, katastarskim pitanjima i imovinskopravnim sporovima.</p>
-      <p><strong>Iskustvo:</strong> Efikasnost postupka, pravna sigurnost klijenata, zastupanje u složenim predmetima.</p>
-    </div>
-
+  <h2>Oblasti pravnih usluga</h2>
+  <div class="grid">
+    <div><strong>Građansko pravo:</strong> Parnično, vanparnično, izvršni i prekršajni postupak</div>
+    <div><strong>Nasledno pravo:</strong> Ostavinski postupak, testament, ugovor o raspolaganju imovine za života, ugovor o doživotnom izdržavanju</div>
+    <div><strong>Porodično pravo:</strong> Razvod, deoba imovine, alimentacija, zaštita od nasilja</div>
+    <div><strong>Obligaciono pravo:</strong> Ugovori, naknada štete, promet nepokretnosti, finansijske transakcije</div>
+    <div><strong>Upravno pravo:</strong> Zastupanje pred institucijama, vođenje postupaka</div>
+    <div><strong>Krivično pravo:</strong> Konsultacije i zastupanje okrivljenog</div>
+    <div><strong>Privredno pravo:</strong> Osnivanje i zastupanje pravnih lica, stečaj, finansijske transakcije</div>
+    <div><strong>Radno pravo:</strong> Zasnivanje radnog odnosa, mobing, otkaz, zastupanje zaposlenih i poslodavaca</div>
   </div>
+</section>
 
-  <p style="text-align: center; margin-top: 40px; font-weight: bold;">
-    Tim kancelarije funkcioniše koordinisano, uz stalnu međusobnu konsultaciju, kako bi obezbedio sveobuhvatan pravni pristup svakom slučaju.
-  </p>
+<section id="nas-tim">
+  <h2>Naš tim</h2>
+  <div class="grid">
+    <div>
+      <strong>ADVOKAT SAŠA VUKOVIĆ</strong><br>
+      Obrazovanje: Pravni fakultet Beograd 2014, master 2015. Sertifikat za maloletna lica, advokatski i pravosudni ispit.<br>
+      Iskustvo: parnični i vanparnični postupci, ugovori, promet nepokretnosti, razvodi, nasleđe, krivično pravo.
+    </div>
+    <div>
+      <strong>ADVOKAT MILEVA VUKOVIĆ</strong><br>
+      Obrazovanje: Pravni fakultet Kragujevac 1983. Sertifikat za maloletna lica, advokatski i pravosudni ispit.<br>
+      Iskustvo: parnični i vanparnični postupci, privredno savetovanje, radni sporovi, razvodi, nasleđe, krivično pravo.
+    </div>
+    <div>
+      <strong>ADVOKAT IVANA VUKOVIĆ</strong><br>
+      Obrazovanje: Pravni fakultet Beograd 2015, sertifikati za katastar.<br>
+      Iskustvo: upravni postupci, parnični i vanparnični postupci, ugovori, promet nepokretnosti, ostavinski postupci, krivično pravo.
+    </div>
+  </div>
 </section>
 
 <section id="blog">
-<h2>BLOG</h2>
-<p>Stručni tekstovi iz oblasti izvršnog, radnog, porodičnog, naslednog i obligacionog prava.</p>
+  <h2>Blogovi</h2>
+  <h3>MENICE I ČEKA KAO VERODOSTOJNIH ISPRAVA</h3>
+  <p>Mišljenje Ministarstva pravde...</p>
+  <h3>PRESTANAK RADNOG ODNOSA NA OSNOVU PISMENOG OTKAZA</h3>
+  <p>Mišljenje Ministarstva rada i socijalne politike...</p>
+  <h3>SPORAZUMNI RAZVOD BRAKA</h3>
+  <p>Zašto se odlučiti za sporazumni razvod...</p>
+  <h3>UPIS ZALOŽNOG PRAVA</h3>
+  <p>Mišljenje Ministarstva ekonomije...</p>
+  <h3>NEMOGUĆNOST NASLEĐIVANJA SUPRUŽNIKA</h3>
+  <p>Razlozi za gubitak prava na nasledstvo...</p>
+  <h3>PRAVO STRANOG FIZIČKOG LICA NA POSEDOVANJE NEPOKRETNOSTI</h3>
+  <p>Mišljenje Saveta Javnobeležničke komore...</p>
 </section>
 
 <section id="kontakt">
-<h2>KONTAKT</h2>
-<p><strong>Beograd:</strong><br>
-Kneza Miloša 95, sprat 1.5, st. 11</p>
-
-<p><strong>Čačak:</strong><br>
-Bate Janković 21</p>
-
-<p><strong>Email:</strong><br>
-advsasavukovic@gmail.com<br>
-mileva.vukovic@gmail.com<br>
-advivana.vukovic@gmail.com</p>
-
-<p><strong>Telefon:</strong><br>
-Saša Vuković: 0642092029<br>
-Mileva Vuković: 0641661188<br>
-Ivana Vuković: +381603384016</p>
+  <h2>Kontakt</h2>
+  <p>Adresa:<br>
+     Kneza Miloša 95, sprat 1.5, st. 11, Beograd, 11000<br>
+     Bate Janković 21, Čačak, 32000</p>
+  <p>Email:<br>
+     advivana.vukovic@gmail.com<br>
+     advsasavukovic@gmail.com<br>
+     mileva.vukovic@gmail.com</p>
+  <p>Telefon:<br>
+     adv. Ivana Vuković: +381603384016<br>
+     adv. Saša Vuković: 0642092029<br>
+     adv. Mileva Vuković: 032348891 / 0641661188 / 063559059</p>
 </section>
 
-<footer>
-© 2026 Advokatska kancelarija VUKOVIĆ & VUKOVIĆ
-</footer>
+<script>
+function toggleMenu() {
+  const nav = document.getElementById('nav');
+  nav.classList.toggle('active');
+}
+</script>
 
 </body>
 </html>
