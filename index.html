@@ -4,296 +4,247 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Advokatska kancelarija Vuković & Vuković</title>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-/* ==== GLOBALNI STILOVI ==== */
-body {
-  font-family: "Times New Roman", serif;
-  margin: 0;
-  padding: 0;
-  background: #fff;
-  color: #000;
-  line-height: 1.6;
-}
+    body {
+        font-family: "Times New Roman", Times, serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+    }
 
-a {
-  text-decoration: none;
-  color: #000;
-}
+    header {
+        background-color: #002b5c;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+    header img {
+        height: 60px;
+    }
 
-header img {
-  height: 60px;
-  width: auto;
-}
+    nav {
+        display: flex;
+        gap: 20px;
+    }
 
-nav a {
-  margin-right: 20px;
-  font-weight: bold;
-  font-size: 16px;
-}
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
 
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background: #000;
-  border-radius: 2px;
-}
+    nav a:hover {
+        color: #ffcc00;
+    }
 
-/* MOBILE NAV */
-@media (max-width: 800px) {
-  nav {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 10px;
-  }
-  nav.active {
-    display: flex;
-  }
-  .menu-toggle {
-    display: flex;
-  }
-}
+    .menu-toggle {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
 
-/* ==== SEKCJE ==== */
-main {
-  padding-top: 100px;
-}
+    @media (max-width: 768px) {
+        nav {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #002b5c;
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        nav.active {
+            display: flex;
+        }
+        .menu-toggle {
+            display: block;
+        }
+    }
 
-section {
-  padding: 60px 40px;
-  max-width: 1100px;
-  margin: auto;
-  border-bottom: 1px solid #ddd;
-}
+    section {
+        padding: 40px 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
 
-h1, h2 {
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 25px;
-}
+    section h2 {
+        color: #002b5c;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #002b5c;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
 
-h1 {
-  font-size: 2.8em;
-}
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
 
-h2 {
-  font-size: 2.0em;
-  color: #333;
-}
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-/* ==== LISTE I GRID ==== */
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin-top: 20px;
-}
-.grid > div {
-  flex: 1 1 300px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: #fafafa;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  font-size: 0.98em;
-}
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
 
-/* ==== BLOG STIL ==== */
-.blog-post {
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-}
+    .card h3 {
+        margin-top: 0;
+        color: #002b5c;
+    }
 
-/* ==== KONTROLNE BOJE ==== */
-strong {
-  font-weight: bold;
-}
+    footer {
+        background-color: #002b5c;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .contact-info a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .contact-info a:hover {
+        text-decoration: underline;
+    }
+
+    p {
+        text-align: justify;
+    }
 </style>
-
 </head>
 <body>
-
 <header>
-  <img src="logo.png" alt="Vuković & Vuković Logo">
-  <div class="menu-toggle" onclick="toggleResponsiveMenu()">
-    <span></span><span></span><span></span>
-  </div>
-  <nav id="nav">
-    <a href="#o-nama">O NAMA</a>
-    <a href="#porodicni">PORODIČNI SPOROVI</a>
-    <a href="#nasledno">NASLEDNO</a>
-    <a href="#radni">RADNI SPOROVI</a>
-    <a href="#ugovorna">UGOVORNA ŠTETA</a>
-    <a href="#placanje">PLAĆANJE</a>
-    <a href="#oblasti">OBLASTI</a>
-    <a href="#nas-tim">NAŠ TIM</a>
-    <a href="#blog">BLOG</a>
-    <a href="#kontakt">KONTAKT</a>
-  </nav>
+    <img src="logo.png" alt="Logo">
+    <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
+    <nav id="navbar">
+        <a href="#o-nama">O nama</a>
+        <a href="#nas-tim">Naš tim</a>
+        <a href="#porodicni-sporovi">Porodični sporovi</a>
+        <a href="#naslednopravni-sporovi">Naslednopravni sporovi</a>
+        <a href="#radni-sporovi">Radni sporovi</a>
+        <a href="#ugovorna-steta">Ugovorna šteta</a>
+        <a href="#placanje">Plaćanje</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
 </header>
 
-<main>
-
-<!-- UVODNA SEKCIJA -->
-<section id="uvod">
-  <h1>Advokatska kancelarija VUKOVIĆ & VUKOVIĆ</h1>
-</section>
-
-<!-- O NAMA (elegantnije) -->
 <section id="o-nama">
-  <h2>O nama</h2>
-  <p>Kancelarija je osnovana 2000. godine i od svog početka pruža visok nivo predanosti klijentima.</p>
-  <p>U raznosvrsnim pravnim problemima pružamo kvalitetnu uslugu vodeći se načelima odgovornosti i savesnosti koja su u temelju tradicije poslovanja advokatske struke.</p>
-  <p>U svojoj ponudi pružamo širok izbor pravnih usluga, a saradnja sa strankama je od prioritetnog značaja. Tokom vođenja postupka u konstantnoj smo vezi sa klijentima pružajući im blagovremena obaveštenja o stanju njihovih predmeta. Odnos klijent-advokat vodi se prvenstveno željama klijenta i pravnim smernicama advokata, a sve u cilju zaštite njegovih pravnih interesa.</p>
-  <p>Kao pouzdan partner svoj rad zasnivamo na integritetu, iskustvu i efikasnosti.</p>
-  <p>Vršimo pro bono usluge i sarađujemo sa brojnim institucijama i uglednim pravnicima.</p>
+    <h2>O nama</h2>
+    <p>
+        Kancelarija je osnovana 2000. godine i od svog početka pruža visok nivo predanosti klijentima. 
+        U raznovrsnim pravnim problemima pružamo kvalitetnu uslugu vodeći se načelima odgovornosti i savesnosti koja su u temelju tradicije poslovanja advokatske struke. 
+        U svojoj ponudi pružamo širok izbor pravnih usluga, a saradnja sa strankama je od prioritetnog značaja. 
+        Tokom vođenja postupka u konstantnoj smo vezi sa klijentima pružajući im blagovremena obaveštenja o stanju njihovih predmeta. 
+        Odnos klijent-advokat vodi se prvenstveno željama klijenta i pravnim smernicama advokata, a sve u cilju zaštite njegovih pravnih interesa. 
+        Kao pouzdan partner, svoj rad zasnivamo na integritetu, iskustvu i efikasnosti. 
+        Vršimo pro bono usluge i sarađujemo sa brojnim institucijama i uglednim pravnicima.
+    </p>
 </section>
 
-<!-- PORODIČNI SPOROVI -->
-<section id="porodicni">
-  <h2>Porodični sporovi</h2>
-  <ul>
-    <li>Sporazumni razvod braka i njegove prednosti i mane</li>
-    <li>Kako se pokreće razvod braka?</li>
-    <li>Koja su prava majke? Koja su prava žene?</li>
-    <li>Tužba za razvod i preljuba; razvod i starateljstvo</li>
-    <li>Cena razvoda; Visina alimentacije</li>
-    <li>Utvrđivanje očinstva i materinstva; Promena prebivališta dece</li>
-    <li>Saglasnost drugog roditelja za odlazak dece u inostranstvo; Deoba zajedničke imovine</li>
-    <li>Izdvajanje stvari iz zajedničke imovine supružnika</li>
-    <li>Nasilje u porodici; Privremena mera; Zabrana prilaska i kontaktiranja</li>
-    <li>Koji sud je nadležan za Beograd?</li>
-  </ul>
-</section>
-
-<!-- NASLEDNO -->
-<section id="nasledno">
-  <h2>Naslednopravni sporovi</h2>
-  <ul>
-    <li>Pokretanje ostavinskog postupka, procedura i troškovi</li>
-    <li>Odricanje od naslednog dela, izjašnjavanje na ostavinskoj raspravi</li>
-    <li>Sastavljanje testamenta od strane advokata</li>
-    <li>Poništaj testamenta, nužni nasledni deo</li>
-    <li>Ugovor o doživotnom izdržavanju</li>
-  </ul>
-</section>
-
-<!-- RADNI -->
-<section id="radni">
-  <h2>Radni sporovi</h2>
-  <ul>
-    <li>Otkazni rok i razlozi za otkaz</li>
-    <li>Kako se raskida ugovor o radu?</li>
-    <li>Zaštita zaposlenih i mobing</li>
-    <li>Pravilnik i kolektivni ugovor</li>
-  </ul>
-</section>
-
-<!-- UGOVORNA ŠTETA -->
-<section id="ugovorna">
-  <h2>Ugovorna šteta</h2>
-  <ul>
-    <li>Jednostrani i sporazumni raskid ugovora</li>
-    <li>Poništaj ugovora o poklonu/kupoprodaji/zakupu</li>
-    <li>Povraćaj, zamena stvari</li>
-    <li>Naknada štete iz ugovora</li>
-  </ul>
-</section>
-
-<!-- PLAĆANJE -->
-<section id="placanje">
-  <h2>Plaćanje</h2>
-  <p>Pitanja plaćanja pravnih usluga i pro bono rada.</p>
-</section>
-
-<!-- OBLASTI PRAVNIH USLUGA -->
-<section id="oblasti">
-  <h2>Oblasti pravnih usluga</h2>
-  <div class="grid">
-    <div><strong>Građansko pravo:</strong> parnični, vanparnični, izvršni i prekršajni postupak</div>
-    <div><strong>Nasledno pravo:</strong> ostavinski postupak, testament, ugovor o doživotnom izdržavanju</div>
-    <div><strong>Porodično pravo:</strong> razvod, alimentacija, zaštita od nasilja</div>
-    <div><strong>Obligaciono pravo:</strong> ugovori, naknada štete, promet nepokretnosti</div>
-    <div><strong>Upravno pravo:</strong> zastupanje pred institucijama</div>
-    <div><strong>Krivično pravo:</strong> konsultacije i zastupanje okrivljenih</div>
-    <div><strong>Privredno pravo:</strong> osnivanje i zastupanje pravnih lica</div>
-    <div><strong>Radno pravo:</strong> zaštita zaposlenih i mobing</div>
-  </div>
-</section>
-
-<!-- NAŠ TIM -->
 <section id="nas-tim">
-  <h2>Naš tim</h2>
-  <div class="grid">
-    <div>
-      <strong>ADVOKAT SAŠA VUKOVIĆ</strong><br>
-      Diplomirani pravnik, master studije, advokatski i pravosudni ispit. Iskustvo u parničnim i vanparničnim postupcima.
+    <h2>Naš tim</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Advokat 1</h3>
+            <p>Specijalizovan za porodično i naslednopravno pravo sa više od 15 godina iskustva.</p>
+        </div>
+        <div class="card">
+            <h3>Advokat 2</h3>
+            <p>Iskusan u radnim sporovima i ugovornim odnosima, pruža strateški pristup zastupanju klijenata.</p>
+        </div>
+        <div class="card">
+            <h3>Advokat 3</h3>
+            <p>Expert za zastupanje u administrativnim i parničnim postupcima, sa posebnim fokusom na zaštitu klijentskih prava.</p>
+        </div>
     </div>
-    <div>
-      <strong>ADVOKAT MILEVA VUKOVIĆ</strong><br>
-      Dugogodišnje iskustvo u parničnim i privrednim sporovima, radnim i naslednim pitanjima.
-    </div>
-    <div>
-      <strong>ADVOKAT IVANA VUKOVIĆ</strong><br>
-      Obrazovanje i iskustvo u upravnim i parničnim postupcima, ugovori i katastar zastupanje.
-    </div>
-  </div>
 </section>
 
-<!-- BLOG -->
-<section id="blog">
-  <h2>Blog</h2>
-  <div class="blog-post"><strong>MENICE I ČEKA KAO VERODOSTOJNIH ISPRAVA</strong><p>Mišljenje Ministarstva pravde...</p></div>
-  <div class="blog-post"><strong>PRESTANAK RADNOG ODNOSA...</strong><p>Mišljenje Ministarstva rada...</p></div>
-  <div class="blog-post"><strong>SPORAZUMNI RAZVOD BRAKA</strong><p>Prednosti i postupak...</p></div>
-  <div class="blog-post"><strong>UPIS ZALOŽNOG PRAVA</strong><p>Založno pravo – šta je...</p></div>
-  <div class="blog-post"><strong>NEMOGUĆNOST NASLEĐIVANJA SUPRUŽNIKA</strong><p>Razlozi i zakonska tumačenja...</p></div>
-  <div class="blog-post"><strong>PRAVO STRANOG FIZIČKOG LICA...</strong><p>Pravo posedovanja nepokretnosti...</p></div>
+<section id="porodicni-sporovi">
+    <h2>Porodični sporovi</h2>
+    <p>
+        Većina pitanja iz porodičnih sporova, kao i parnični i vanparnični postupci, regulisani su Porodičnim zakonom. 
+        Ishod pitanja i rezultati pokrenutih postupaka u velikoj meri zavise od okolnosti konkretnog slučaja. 
+        Za većinu pomenutih pravnih problema korisno je imati pravnog zastupnika koji vodi klijenta kroz postupak, zastupa njegove interese, pruža detaljna objašnjenja i usmerava ga kako da postavi i brani svoje zahteve.
+    </p>
 </section>
 
-<!-- KONTAKT -->
+<section id="naslednopravni-sporovi">
+    <h2>Naslednopravni sporovi</h2>
+    <p>
+        Pitanja naslednopravnih odnosa i sporova regulisana su Zakonom o nasleđivanju. 
+        Za uobičajene naslednopravne postupke, u kojima ne postoji sukob oko pripadanja naslednog dela ili lica koja nasleđuju, angažovanje advokata nije neophodno, jer sud ili javni beležnik reguliše sve formalnosti i obaveze.
+    </p>
+</section>
+
+<section id="radni-sporovi">
+    <h2>Radni sporovi</h2>
+    <p>
+        Pitanja iz radnih odnosa i sporova regulisana su Zakonom o radu. 
+        Korisno je da i zaposleni i poslodavac poznaju svoja prava i obaveze predviđena zakonom i ugovorom. 
+        Svoja prava ostvaruju kroz radni spor, a pored toga moguće je pokrenuti i upravni postupak kada je poslodavac državna, pokrajinska ili gradska institucija.
+    </p>
+</section>
+
+<section id="ugovorna-steta">
+    <h2>Ugovorna šteta</h2>
+    <p>
+        Ugovorni odnosi uglavnom su regulisani Zakonom o obligacionim odnosima. 
+        Poznavanje prava iz ugovora omogućava strankama da neispunjene obaveze ili nastalu štetu nadomeste adekvatnim zahtevom za ispunjenje, zamenu ili naknadu štete.
+    </p>
+</section>
+
+<section id="placanje">
+    <h2>Plaćanje</h2>
+    <p>
+        Česta pitanja uključuju način plaćanja advokatskih usluga, da li advokati rade na procenat, koliko koštaju konsultacije i pravni saveti, koja je advokatska tarifa, koliko košta tužba ili ugovor, cena zastupanja i pisanja. 
+        Plaćanje je regulisano advokatskim tarifnikom, ali uvek može biti predmet dogovora sa klijentom. 
+        Pro bono rad se pruža klijentima sa dugom ili opširnom saradnjom, kao i u slučajevima kada priroda etike nalaže da se izađe u susret.
+    </p>
+</section>
+
 <section id="kontakt">
-  <h2>Kontakt</h2>
-  <p>Kneza Miloša 95, sprat 1.5, st. 11, Beograd, 11000<br>
-     Bate Janković 21, Čačak, 32000</p>
-  <p>Email:<br>
-     advivana.vukovic@gmail.com<br>
-     advsasavukovic@gmail.com<br>
-     mileva.vukovic@gmail.com</p>
-  <p>Telefon:<br>
-     adv. Ivana Vuković: +381603384016<br>
-     adv. Saša Vuković: 0642092029<br>
-     adv. Mileva Vuković: 032348891, 0641661188, 063559059</p>
+    <h2>Kontakt</h2>
+    <div class="contact-info">
+        <a href="tel:+381642092029">+381 64 209 2029</a>
+        <a href="tel:+381641661188">+381 64 166 1188</a>
+        <a href="mailto:info@sasavukovic-law.rs">info@sasavukovic-law.rs</a>
+    </div>
 </section>
 
-</main>
+<footer>
+    &copy; 2026 Advokatska kancelarija Vuković & Vuković
+</footer>
 
 <script>
-function toggleResponsiveMenu() {
-  const nav = document.getElementById('nav');
-  nav.classList.toggle('active');
+function toggleMenu() {
+    document.getElementById('navbar').classList.toggle('active');
 }
 </script>
-
 </body>
 </html>
